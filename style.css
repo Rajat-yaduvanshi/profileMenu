@@ -1,0 +1,28 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+header {
+  background-color: #7b8080;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.eco {
+  color: rgb(56, 225, 56); 
+}
+
+.money {
+  color: rgb(5, 5, 129);
+}
