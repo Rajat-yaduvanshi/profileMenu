@@ -1,207 +1,263 @@
-/* style.css */
 
-/* Reset styles */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+header {
+  background-color: #7b8080;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.eco {
+  color: rgb(56, 225, 56);
+}
+
+.money {
+  color: rgb(5, 5, 129);
+}
+
+
+h1 {
+  margin-bottom: 20px;
+  font-size: 2.5em;
+}
+
+.container {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  margin: 20px;
+  transition: margin-left 0.3s ease;
+}
+
+.container.shifted {
+  margin-left: 250px;
+}
+
+/* Button styles */
+button {
+  background-color: #5a8ce8;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+  margin: 10px;
+}
+
+button:hover {
+  /* background-color: #4a7bc2; */
+  transform: translateY(-2px);
+}
+
+/* Dropdown menu styles */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 160px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  border-radius: 5px;
+}
+
+.dropdown-menu a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  transition: background-color 0.3s;
+}
+
+.dropdown-menu a:hover {
+  background-color: #f1f1f1;
+}
+
+/* Side menu styles */
+.side-menu {
+  height: 100%;
+  width: 250px;
+  position: fixed;
+  top: 0;
+  left: -250px;
+  background-color: #3c5077;
+  padding-top: 20px;
+  transition: left 0.3s ease;
+  z-index: 2;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.side-menu ul {
+  list-style-type: none;
+  padding: 0; 
+}
+
+.side-menu li {
+  margin: 10px 0;
+}
+
+.side-menu a {
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  transition: background-color 0.3s; 
+}
+
+.side-menu a i {
+  margin-right: 20px;
+  margin-left: 10px;
+}
+
+.side-menu a:hover {
+  color: white;
+  background-color: #4a7bc2;
+}
+
+.hamburger {
+  background: none;
+  border: none;
+  font-size: 24px; 
+  color: white; 
+  cursor: pointer;
+  padding: 10px;
+  margin-left: 10px;
+}
+
+.hamburger:hover {
+  color: rgb(37, 215, 37);
+}
+
+/* Modal Popup styles */
+.modal-popup {
+  display: none;
+  position: fixed;
+  z-index: 3;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(5px);
+  overflow: auto;
+}
+
+.modal-content {
+  background-color: white;
+  margin: 5% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 600px;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 0.5s;
+}
+
+.close-modal {
+  background-color: #f44336;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 20px;
+  transition: background-color 0.3s;
+}
+
+.close-modal:hover {
+  background-color: #d32f2f;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
   }
-  
-  /* Body styles */
-  body {
-    font-family: "Roboto", sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
+  to {
+    opacity: 1;
   }
-  
-  /* Header styles */
+}
+
+
+.modal-content h2 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.modal-content ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.modal-content li {
+  margin: 10px 0;
+}
+
+.modal-content a {
+  color: #5a8dee;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.modal-content a:hover {
+  color: #4a7bc2;
+}
+
+
+@media (max-width: 768px) {
+ 
   header {
-    background-color: #7b8080;
-    color: white;
-    padding: 10px;
-    text-align: center;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 15px;
   }
+
   
-  .eco {
-    color: rgb(56, 225, 56);
-  }
-  
-  .money {
-    color: rgb(5, 5, 129);
-  }
-  
-  /* Title styles */
   h1 {
-    margin-bottom: 20px;
-    font-size: 2.5em;
+    font-size: 2em;
   }
-  
-  /* Container styles */
+
   .container {
-    display: flex;
-    justify-content: space-around;
-    align-items: flex-start;
-    margin: 20px;
-    transition: margin-left 0.3s ease;
+    flex-direction: column; 
+    align-items: center; 
   }
-  
-  .container.shifted {
-    margin-left: 250px;
-  }
-  
-  /* Button styles */
+
+ 
   button {
-    background-color: #5a8ce8;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s, transform 0.2s;
-    margin: 10px;
+    width: 100%; 
+    margin: 5px 0; 
   }
-  
-  button:hover {
-    /* background-color: #4a7bc2; */
-    transform: translateY(-2px);
-  }
-  
-  /* Dropdown menu styles */
+
+
   .dropdown-menu {
-    display: none;
-    position: absolute;
-    background-color: white;
-    min-width: 160px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    z-index: 1;
-    border-radius: 5px;
+    width: 100%; 
   }
-  
-  .dropdown-menu a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    transition: background-color 0.3s;
-  }
-  
-  .dropdown-menu a:hover {
-    background-color: #f1f1f1;
-  }
-  
-  /* Side menu styles */
-  .side-menu {
-    height: 100%;
-    width: 250px;
-    position: fixed;
-    top: 0;
-    left: -250px;
-    background-color: #3c5077;
-    padding-top: 20px;
-    transition: left 0.3s ease;
-    z-index: 2;
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
-  }
-  
-  .side-menu ul {
-    list-style-type: none;
-    padding: 0;
-  }
-  
-  .side-menu li {
-    margin: 10px 0;
-  }
-  
-  .side-menu a {
-    color: white;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    transition: background-color 0.3s;
-  }
-  
-  .side-menu a:hover {
-    color: white;
-    background-color: #4a7bc2;
-  }
-  
-  
-  /* Modal Popup styles */
-  .modal-popup {
-    display: none;
-    position: fixed;
-    z-index: 3;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
-    backdrop-filter: blur(5px);
-    overflow: auto;
-  }
-  
+
+ 
   .modal-content {
-    background-color: white;
-    margin: 5% auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
-    max-width: 600px;
-    border-radius: 10px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-    animation: fadeIn 0.5s;
+    width: 90%; 
   }
+}
+
+
+@media (max-width: 480px) {
   
-  .close-modal {
-    background-color: #f44336;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    border-radius: 5px;
-    margin-top: 20px;
-    transition: background-color 0.3s;
+  h1 {
+    font-size: 1.5em; 
   }
-  
-  .close-modal:hover {
-    background-color: #d32f2f;
+
+  button {
+    font-size: 14px; 
   }
-  
-  /* Animation for modal */
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-  }
-  
-  /* Modal heading styles */
-  .modal-content h2 {
-    margin-bottom: 20px;
-    color: #333;
-  }
-  
-  /* Modal link styles */
-  .modal-content ul {
-    list-style-type: none;
-    padding: 0;
-  }
-  
-  .modal-content li {
-    margin: 10px 0;
-  }
-  
-  .modal-content a {
-    color: #5a8dee;
-    text-decoration: none;
-    transition: color 0.3s;
-  }
-  
-  .modal-content a:hover {
-    color: #4a7bc2;
-  }
-  
+}

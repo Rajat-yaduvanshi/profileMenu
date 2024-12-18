@@ -3,8 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ecomoney Test</title>
+    <title>Ecomoney Project</title>
     <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
   </head>
   <body>
     <header>
@@ -21,36 +25,42 @@
         </div>
       </div>
 
-      <!-- Side Menu -->
-
       <div class="side-menu-container">
         <button id="openSideMenu">Side Menu</button>
         <div class="side-menu" id="sideMenu">
-            <button id="closeSideMenu">Close</button>
-            <ul>
-                <li><a href="#profile-settings">Profile Settings</a></li>
-                <li><a href="#account-settings">Account Settings</a></li>
-                <li><a href="#logout">Logout</a></li>
-            </ul>
+          <button id="closeSideMenu" class="hamburger">☰</button>
+          <ul class="menu-items">
+            <li>
+              <a href="#profile-settings"
+                ><i class="fas fa-user"></i> Profile Settings</a
+              >
+            </li>
+            <li>
+              <a href="#account-settings"
+                ><i class="fas fa-cog"></i> Account Settings</a
+              >
+            </li>
+            <li>
+              <a href="#logout"><i class="fas fa-sign-out-alt"></i> Logout</a>
+            </li>
+          </ul>
         </div>
-    </div>
+      </div>
 
-    <!-- MOdal -->
-
-    <div class="modal-button-container">
-        <button id="openModal">Modal </button>
+      <div class="modal-button-container">
+        <button id="openModal">Modal</button>
         <div class="modal-popup" id="modalPopup">
-            <div class="modal-content">
-                <h2>Profile Menu</h2>
-                <ul>
-                    <li><a href="#profile-settings">Profile Settings</a></li>
-                    <li><a href="#account-settings">Account Settings</a></li>
-                    <li><a href="#logout">Logout</a></li>
-                </ul>
-                <button class="close-modal">Close</button>
-            </div>
+          <div class="modal-content">
+            <h2>Profile Menu</h2>
+            <ul>
+              <li><a href="#profile-settings">Profile Settings</a></li>
+              <li><a href="#account-settings">Account Settings</a></li>
+              <li><a href="#logout">Logout</a></li>
+            </ul>
+            <button class="close-modal">Close</button>
+          </div>
         </div>
-    </div>
+      </div>
     </div>
 
     <script src="script.js"></script>

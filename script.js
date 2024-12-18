@@ -76,3 +76,4 @@ const dropdownItems = dropdownMenu.querySelectorAll("a, button");
 dropdownItems.forEach((item) => {
     item.addEventListener("click", closeDropdownMenu);
 });
+
